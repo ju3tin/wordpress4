@@ -28,10 +28,10 @@
         });
     </script>
 </head>
-<body>
+<body><div align="center">
 	<div class="container">
     <div class="row">
-        <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+        <div align="center" class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-6">
                     <address>
@@ -117,7 +117,7 @@
                 </button></td>
             </div>
         </div>
-    </div>
+    </div></div>
 	<script type="text/javascript">
 	
 	</script>
