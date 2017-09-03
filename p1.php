@@ -3,20 +3,33 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <meta name="robots" content="noindex, nofollow">
+
     <title>Payment Receipt BS3 - Bootsnipp.com</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <style type="text/css">
-        body {
+    body {
     margin-top: 20px;
 }
     </style>
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="jquery-1.10.2.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script type="text/javascript">
+        window.alert = function(){};
+        var defaultCSS = document.getElementById('bootstrap-css');
+        function changeCSS(css){
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
+            else $('head > link').filter(':first').replaceWith(defaultCSS); 
+        }
+        $( document ).ready(function() {
+          var iframe_height = parseInt($('html').height()); 
+          window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
+        });
+    </script>
 </head>
 <body>
-<div class="container">
+	<div class="container">
     <div class="row">
         <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
             <div class="row">
@@ -44,6 +57,7 @@
                 <div class="text-center">
                     <h1>Receipt</h1>
                 </div>
+                </span>
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -55,19 +69,19 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="col-md-9"><em>Baked Rodopa Sheep Feta</em></td>
+                            <td class="col-md-9"><em>Baked Rodopa Sheep Feta</em></h4></td>
                             <td class="col-md-1" style="text-align: center"> 2 </td>
                             <td class="col-md-1 text-center">$13</td>
                             <td class="col-md-1 text-center">$26</td>
                         </tr>
                         <tr>
-                            <td class="col-md-9"><em>Lebanese Cabbage Salad</em></td>
+                            <td class="col-md-9"><em>Lebanese Cabbage Salad</em></h4></td>
                             <td class="col-md-1" style="text-align: center"> 1 </td>
                             <td class="col-md-1 text-center">$8</td>
                             <td class="col-md-1 text-center">$8</td>
                         </tr>
                         <tr>
-                            <td class="col-md-9"><em>Baked Tart with Thyme and Garlic</em></td>
+                            <td class="col-md-9"><em>Baked Tart with Thyme and Garlic</em></h4></td>
                             <td class="col-md-1" style="text-align: center"> 3 </td>
                             <td class="col-md-1 text-center">$16</td>
                             <td class="col-md-1 text-center">$48</td>
@@ -98,14 +112,14 @@
                         </tr>
                     </tbody>
                 </table>
-              <a href="/stripe">  <button type="button" class="btn btn-success btn-lg btn-block">
+                <button type="button" class="btn btn-success btn-lg btn-block">
                     Pay Now   <span class="glyphicon glyphicon-chevron-right"></span>
-                </button></a>
+                </button></td>
             </div>
         </div>
     </div>
-<script type="text/javascript">
-
-</script>
+	<script type="text/javascript">
+	
+	</script>
 </body>
 </html>
