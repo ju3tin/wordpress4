@@ -90,16 +90,16 @@
             <h2 class="section-heading">Discover what all the buzz is about!</h2>
             <p>Our app is available on any mobile device! Download now to get started!</p>
             
-            <div class="container">
+            
 	<div class="row">
 		<h2>Fancy Login / Registration form</h2>
-	</div>
+	
 </div>
 <br>
 <br>
-<div class="container">
-<div class="row">
-<div class="col-md-4 col-md-offset-4">
+<div class="">
+<div class="">
+<div class="">
 <div class="form-body">
     <ul class="nav nav-tabs final-login">
         <li class="active"><a data-toggle="tab" href="#sectionA">Sign In</a></li>
