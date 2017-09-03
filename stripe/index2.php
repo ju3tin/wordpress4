@@ -12,7 +12,7 @@
  */
 
 // Stripe library
-require '../stripe/stripe/Stripe.php';
+/*require '../stripe/stripe/Stripe.php';
 
 $params = array(
 	"testmode"   => "on",
@@ -86,7 +86,7 @@ if(isset($_POST['stripeToken']))
 	echo "<BR>Stripe Response : ";
 	
 	print_r($charge); exit;
-}
+} */
 ?>
 <!DOCTYPE html>
 <html lang="en">
