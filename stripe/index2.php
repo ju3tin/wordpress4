@@ -12,7 +12,7 @@
  */
 
 // Stripe library
-require '../Stripe_gateway_integration_demo_with_PHP/stripe/Stripe.php';
+require '../stripe/stripe/Stripe.php';
 
 $params = array(
 	"testmode"   => "on",
