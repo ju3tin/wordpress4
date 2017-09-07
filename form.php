@@ -493,7 +493,7 @@ input:-webkit-autofill:focus {
             <div>&nbsp;</div>
             <div class="inputGroupContainer">
               <!-- Google No Captcha Human Security Scripts -->
-              <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
+             
               <div class="g-recaptcha" data-sitekey="Enter Your Public Site Key Here"  data-callback="recaptchaCallback" style="transform:scale(0.90);-webkit-transform:scale(0.90);transform-origin:0 0;-webkit-transform-origin:0 0; color:transparent; font-weight:normal; line-height:0px;" tabindex="6"> </div>
               <div>
                 <label style="color:red; font-weight:normal; font-size:12px; position:relative; top:-8px;" class="error" for="hiddenRecaptcha" generated="true"></label>

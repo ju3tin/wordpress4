@@ -87,14 +87,15 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 mx-auto">
-            <h2 class="section-heading">Discover what all the buzz is about!</h2>
-            <p>Our app is available on any mobile device! Download now to get started!</p>
+          
             
             
 	<div class="row">
-		<h2>Fancy Login / Registration form</h2>
+		<h2>Click Here To Sign In</h2>
 	
 </div>
+<a href="/login5/login.php">
+click here to sign in</a>
 <br>
 <br>
 <div class="">
@@ -102,13 +103,14 @@
 <div class="">
 <div class="form-body">
     <ul class="nav nav-tabs final-login">
+    
         <li class="active"><a data-toggle="tab" href="#sectionA">Sign In</a></li>
         <li><a data-toggle="tab" href="#sectionB">Join us!</a></li>
     </ul>
     <div class="tab-content">
         <div id="sectionA" class="tab-pane fade in active">
         <div class="innter-form">
-            <form class="sa-innate-form" method="post">
+            <form class="sa-innate-form" method="post" action="login/checklogin.php">
             <label>Email Address</label>
             <input type="text" name="username">
             <label>Password</label>
