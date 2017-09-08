@@ -90,24 +90,129 @@
           
             
             
-	<div class="row">
-		<h2>Click Here To Sign In</h2>
+	<div class="">
+    
+    
+    
+    
+    <?php
+ob_start();
+session_start();
+require_once 'login5/dbconnect.php';
+
+// if session is set direct to index
+if (isset($_SESSION['user'])) {
+    header("Location: login5/index.php");
+    exit;
+}
+
+if (isset($_POST['btn-login'])) {
+    $email = $_POST['email'];
+    $upass = $_POST['pass'];
+
+    $password = hash('sha256', $upass); // password hashing using SHA256
+    $stmt = $conn->prepare("SELECT id, username, password FROM users WHERE email= ?");
+    $stmt->bind_param("s", $email);
+    /* execute query */
+    $stmt->execute();
+    //get result
+    $res = $stmt->get_result();
+    $stmt->close();
+
+    $row = mysqli_fetch_array($res, MYSQLI_ASSOC);
+
+    $count = $res->num_rows;
+    if ($count == 1 && $row['password'] == $password) {
+        $_SESSION['user'] = $row['id'];
+        header("Location: index.php");
+    } elseif ($count == 1) {
+        $errMSG = "Bad password";
+    } else $errMSG = "User not found";
+}
+?>
+
+
+ <div id="">
+        <form method="post" autocomplete="off">
+
+            <div class="">
+
+                <div class="">
+                    <h2 class="">Login:</h2>
+                </div>
+
+                <div class="">
+                    <hr/>
+                </div>
+
+                <?php
+                if (isset($errMSG)) {
+
+                    ?>
+                    <div class="form-group">
+                        <div class="alert alert-danger">
+                            <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
+                        </div>
+                    </div>
+                    <?php
+                }
+                ?>
+
+                <div class="">
+                    <div class="">
+                        <span class=""><span class=""></span></span>
+                        <input type="email" name="email" class="form-control" placeholder="Email" required/>
+                    </div>
+                </div>
+
+                <div class="">
+                    <div class="">
+                        <span class=""><span class=""></span></span>
+                        <input type="password" name="pass" class="form-control" placeholder="Password" required/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <hr/>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-block btn-primary" name="btn-login">Login</button>
+                </div>
+
+                <div class="form-group">
+                    <hr/>
+                </div>
+
+                <div class="form-group">
+                    <a href="register.php" type="button" class="btn btn-block btn-danger"
+                       name="btn-login">Register</a>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+    
+    
+    
+    
+    
+    
+	 <?php /*  	<h2>Click Here To Sign In</h2>
 	
 </div>
 <a href="/login5/login.php">
 click here to sign in</a>
 <br>
 <br>
-<div class="">
-<div class="">
-<div class="">
 <div class="form-body">
     <ul class="nav nav-tabs final-login">
     
-        <li class="active"><a data-toggle="tab" href="#sectionA">Sign In</a></li>
+       <li class="active"><a data-toggle="tab" href="#sectionA">Sign In</a></li>
         <li><a data-toggle="tab" href="#sectionB">Join us!</a></li>
     </ul>
-    <div class="tab-content">
+  <div class="tab-content">
         <div id="sectionA" class="tab-pane fade in active">
         <div class="innter-form">
             <form class="sa-innate-form" method="post" action="login/checklogin.php">
@@ -152,10 +257,7 @@ click here to sign in</a>
             </div>
         </div>
     </div>
-    </div>
-    </div>
-    </div>
-    </div>
+    </div> */ ?>
 
             
            <!-- <div class="badges">
