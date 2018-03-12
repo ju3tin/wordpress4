@@ -1,1 +1,0 @@
-Extract all files and floder and paste into a new folder before editing.
